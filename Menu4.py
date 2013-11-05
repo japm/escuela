@@ -37,10 +37,18 @@ def ejecutarAccion(menu, opcion):
         elif (opcion == "99"):
             menu = 0 #Ponemos menu en 0 para terminar el programa
     elif (menu == 2):
-        if (opcion == "99"):
+        if (opcion == "1"):
+            suma() #Suma
+        elif (opcion == "2"):
+            multiplicacion()
+        elif (opcion == "99"):
             menu = 1
     elif (menu == 3):
-        if (opcion == "99"):
+        if (opcion == "1"):
+            areaRect() #Suma
+        elif (opcion == "2"):
+            areaCirc()
+        elif (opcion == "99"):
             menu = 1
     return menu
     
@@ -64,7 +72,36 @@ def menuGeom():
     print "	1  - Area rectangulo"
     print "	2  - Area circulo"
     print "	99 - Menu principal"    
+ 
+def suma():
+    limpiarPantalla()
+    v1 = float(raw_input("Ingrese primer valor: "))
+    v2 = float(raw_input("Ingrese segundo valor: "))
+    print("%f + %f = %f" % (v1, v2, v1 + v2))
+    raw_input("Presione cualquier tecla y enter para seguir....")
 
+def multiplicacion():
+    limpiarPantalla()
+    v1 = float(raw_input("Ingrese primer valor: "))
+    v2 = float(raw_input("Ingrese segundo valor: "))
+    print("%f * %f = %f" % (v1, v2, v1 * v2))
+    raw_input("Presione cualquier tecla y enter para seguir....")
+
+def areaCirc():
+    limpiarPantalla()
+    v1 = float(raw_input("Ingrese el radio: "))
+    print("%f * Pi * Pi  = %f" % (v1, v1 * 3.1416 * 3.1416))
+    raw_input("Presione cualquier tecla y enter para seguir....")
+
+def areaRect():
+    limpiarPantalla()
+    v1 = float(raw_input("Ingrese el largo: "))
+    v2 = float(raw_input("Ingrese el ancho: "))
+    print("%f * %f = %f" % (v1, v2 , v1 * v2))
+    raw_input("Presione cualquier tecla y enter para seguir....")
+
+    
+    
 menu = 1
 terminar = False    
 inicio()
