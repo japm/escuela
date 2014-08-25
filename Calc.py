@@ -51,7 +51,10 @@ def ejecutarAccion(menu, opcion):
         elif (opcion == "99"):
             menu = 1
     return menu
-    
+
+
+################### Menues #############################################
+
 def menuUno():
     limpiarPantalla()
     print "Menu Principal:"
@@ -72,35 +75,51 @@ def menuGeom():
     print "	1  - Area rectangulo"
     print "	2  - Area circulo"
     print "	99 - Menu principal"    
- 
+
+#################### Acciones ########################################### 
+
 def suma():
     limpiarPantalla()
-    v1 = float(raw_input("Ingrese primer valor: "))
-    v2 = float(raw_input("Ingrese segundo valor: "))
-    print("%f + %f = %f" % (v1, v2, v1 + v2))
+    try:
+        v1 = float(raw_input("Ingrese primer valor: "))
+        v2 = float(raw_input("Ingrese segundo valor: "))
+        print("%f + %f = %f" % (v1, v2, v1 + v2))
+    except ValueError:
+        print "No ingresaste un numero!"
     raw_input("Presione cualquier tecla y enter para seguir....")
 
 def multiplicacion():
     limpiarPantalla()
-    v1 = float(raw_input("Ingrese primer valor: "))
-    v2 = float(raw_input("Ingrese segundo valor: "))
-    print("%f * %f = %f" % (v1, v2, v1 * v2))
+    try:
+        v1 = float(raw_input("Ingrese primer valor: "))
+        v2 = float(raw_input("Ingrese segundo valor: "))
+        print("%f * %f = %f" % (v1, v2, v1 * v2))
+    except ValueError:
+        print "No ingresaste un numero!"
     raw_input("Presione cualquier tecla y enter para seguir....")
 
 def areaCirc():
     limpiarPantalla()
-    v1 = float(raw_input("Ingrese el radio: "))
-    print("%f * Pi * Pi  = %f" % (v1, v1 * v1 * 3.1416))
+    try:
+        v1 = float(raw_input("Ingrese el radio: "))
+        print("%f * Pi * Pi  = %f" % (v1, v1 * v1 * 3.1416))
+    except ValueError:
+        print "No ingresaste un numero!"
     raw_input("Presione cualquier tecla y enter para seguir....")
 
 def areaRect():
     limpiarPantalla()
-    v1 = float(raw_input("Ingrese el largo: "))
-    v2 = float(raw_input("Ingrese el ancho: "))
-    print("%f * %f = %f" % (v1, v2 , v1 * v2))
+    try:
+        v1 = float(raw_input("Ingrese el largo: "))
+        v2 = float(raw_input("Ingrese el ancho: "))
+        print("%f * %f = %f" % (v1, v2 , v1 * v2))
+    except ValueError:
+        print "No ingresaste un numero!"
     raw_input("Presione cualquier tecla y enter para seguir....")
 
     
+################## Programa principal ###########################################
+
     
 menu = 1
 terminar = False    
