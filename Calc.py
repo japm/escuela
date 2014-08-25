@@ -102,7 +102,7 @@ def areaCirc():
     limpiarPantalla()
     try:
         v1 = float(raw_input("Ingrese el radio: "))
-        print("%f * Pi * Pi  = %f" % (v1, v1 * v1 * 3.1416))
+        print("%f * %f * Pi  = %f" % (v1, v1 ,v1 * v1 * 3.1416))
     except ValueError:
         print "No ingresaste un numero!"
     raw_input("Presione cualquier tecla y enter para seguir....")
