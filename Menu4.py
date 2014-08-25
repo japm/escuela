@@ -90,7 +90,7 @@ def multiplicacion():
 def areaCirc():
     limpiarPantalla()
     v1 = float(raw_input("Ingrese el radio: "))
-    print("%f * Pi * Pi  = %f" % (v1, v1 * 3.1416 * 3.1416))
+    print("%f * Pi * Pi  = %f" % (v1, v1 * v1 * 3.1416))
     raw_input("Presione cualquier tecla y enter para seguir....")
 
 def areaRect():
